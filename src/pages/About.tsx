@@ -1,5 +1,5 @@
 import { Flame, Heart, Leaf } from "lucide-react";
-import hero from "../assets/hero-jollof.jpg";
+import hero from "../assets/frontage of item7.jpg";
 import "../styles/about.css";
 
 const values = [
@@ -18,7 +18,9 @@ export default function About() {
           <p>Item 7 Go started with one mission: serve Ibadan the kind of jollof, fried rice and suya that feels like home — quickly, consistently, and with real heart.</p>
           <p>Today our pots stay hot from 10 AM to 10 PM, every day of the week, feeding students, families, workers and travellers passing through Iwo Road.</p>
         </div>
-        <img src={hero} alt="Our signature jollof" />
+        <img src={hero} alt="Our signature jollof" 
+        style={{ width: "80%", height: "auto" }}
+        />
       </section>
 
       <section className="values section-cream">

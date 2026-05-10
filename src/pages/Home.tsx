@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Clock, MapPin, Flame } from "lucide-react";
+import front from "../assets/front-new.jpg";
 import hero from "../assets/hero-jollof.jpg";
 import suya from "../assets/menu-suya.jpg";
 import meatpie from "../assets/menu-meatpie.jpg";
@@ -9,10 +10,14 @@ import "../styles/hero.css";
 import "../styles/home.css";
 
 export default function Home() {
+
+const googleNavigate = (url: string) => {
+  window.open(url, "_blank");
+}
   return (
     <>
       <section className="hero">
-        <img src={hero} alt="" className="hero__bg" aria-hidden />
+        <img src={front} alt="" className="hero__bg" aria-hidden />
         <div className="hero__inner">
           <div>
             <span className="hero__chip"><Flame size={14} /> Iwo Road · Ibadan</span>
@@ -77,15 +82,16 @@ export default function Home() {
             </p>
             <p><MapPin size={20} /> CW3R+FQ3, opposite Item 7, Iwo Road, Ibadan, Oyo</p>
             <p><Clock size={20} /> Open daily 10:00 AM – 10:00 PM</p>
-            <a
-              href="https://maps.app.goo.gl/gNo1bX12V7DNnco87"
-              target="_blank"
-              rel="noreferrer"
+            <div
+              // href="https://maps.app.goo.gl/gNo1bX12V7DNnco87"
+              // target="_blank"
+              // rel="noreferrer"
               className="btn btn-solid"
               style={{ marginTop: "1.5rem" }}
+              onClick={ ()=> googleNavigate("https://maps.app.goo.gl/gNo1bX12V7DNnco87")}
             >
               Get directions <ArrowRight size={18} />
-            </a>
+            </div>
           </div>
           <div className="visit__map">
             <iframe

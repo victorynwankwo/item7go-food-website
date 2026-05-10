@@ -31,6 +31,9 @@ const sections = [
 ];
 
 export default function MenuPage() {
+  const whatsappNavigate = (url: string) => {
+    window.open(url, "_blank");
+  }
   return (
     <>
       <section className="menu-hero">
@@ -68,7 +71,10 @@ export default function MenuPage() {
         <div className="menu-cta">
           <h2>Hungry already?</h2>
           <p>Call us to order ahead — your meal will be ready when you arrive.</p>
-          <a href="tel:+2348155745321" className="btn btn-primary">+234 815 574 5321</a>
+          <div className="btn btn-primary"
+          style={{cursor:"pointer"}}
+          onClick={()=> whatsappNavigate("https://wa.me/2348155745321?text=Hi%20Item%207%20Go%2C%20I%20would%20like%20to%20place%20an%20order.")}
+          >+234 815 574 5321</div>
         </div>
       </div>
     </>

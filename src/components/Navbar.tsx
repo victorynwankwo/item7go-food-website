@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/new-logo-item.jpg";
 import "../styles/navbar.css";
 
 const links = [
@@ -24,8 +24,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar__inner">
         <Link to="/" className="navbar__brand">
-          <img src={logo} alt="Item 7 Go" />
-          <span>Item 7 Go</span>
+          <img src={logo} alt="Item 7 Go" style={{width:"5rem"}} />
         </Link>
 
         <nav className="navbar__links" aria-label="Primary">
