@@ -1,0 +1,36 @@
+.menu-hero {
+  background: var(--gradient-hero);
+  color: var(--color-cream);
+  padding: 5rem 0;
+}
+.menu-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-top: 0.75rem; }
+.menu-hero p { color: rgba(251, 243, 226, 0.85); margin-top: 1rem; max-width: 36rem; }
+
+.menu-section { padding: 4rem 0; }
+.menu-section + .menu-section { padding-top: 0; }
+.menu-section__head { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+.menu-section__head h2 { color: var(--color-primary); font-size: clamp(1.75rem, 3.5vw, 2.25rem); }
+.menu-section__head .rule { flex: 1; height: 1px; background: var(--color-border); }
+
+.menu-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .menu-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.menu-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.menu-item__body { padding: 1.25rem; }
+.menu-item__top { display: flex; justify-content: space-between; gap: 0.75rem; }
+.menu-item h3 { font-size: 1.1rem; }
+.menu-item__price { font-family: var(--font-display); color: var(--color-primary); }
+.menu-item p { margin-top: 0.5rem; color: var(--color-muted-fg); font-size: 0.9rem; }
+
+.menu-cta {
+  margin: 4rem 0;
+  background: var(--color-charcoal);
+  color: var(--color-cream);
+  padding: 3rem 1.5rem;
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+.menu-cta h2 { color: var(--color-secondary); font-size: clamp(1.75rem, 4vw, 2.5rem); }
+.menu-cta p { color: rgba(251, 243, 226, 0.8); margin-top: 0.5rem; }
+.menu-cta a { margin-top: 1.5rem; padding: 1rem 2rem; }

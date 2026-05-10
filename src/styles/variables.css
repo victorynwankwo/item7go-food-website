@@ -1,0 +1,39 @@
+:root {
+  /* Brand palette */
+  --color-bg: #fdf7ec;
+  --color-cream: #fbf3e2;
+  --color-fg: #2a1a10;
+  --color-charcoal: #2c1f17;
+  --color-card: #ffffff;
+  --color-border: #e7dccb;
+  --color-muted: #f1e8d6;
+  --color-muted-fg: #7a6754;
+
+  --color-primary: #c0341d;          /* deep tomato */
+  --color-primary-foreground: #fff8ec;
+  --color-secondary: #f4c12a;        /* sun yellow */
+  --color-secondary-foreground: #2a1a10;
+  --color-accent: #d96a1f;           /* paprika */
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #8a2615 0%, #b6371d 50%, #d68a23 100%);
+  --gradient-warm: linear-gradient(135deg, #f4c12a, #d96a1f);
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px -10px rgba(40, 20, 10, 0.18);
+  --shadow-warm: 0 20px 60px -20px rgba(192, 52, 29, 0.45);
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius: 0.875rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+
+  /* Typography */
+  --font-display: "Archivo Black", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* Layout */
+  --container-max: 80rem;
+  --nav-h: 72px;
+}
