@@ -27,6 +27,13 @@ export default function Contact() {
     message: "",
   });
 
+  function clearError(field: keyof FormErrors) {
+    setErrors((prev) => ({
+      ...prev,
+      [field]: "",
+    }));
+  }
+
   function validate(): boolean {
     const newErrors: FormErrors = {
       name: "",
@@ -34,7 +41,7 @@ export default function Contact() {
       message: "",
     };
 
-    // Name validation (letters + spaces only)
+    // Name validation
     const nameRegex = /^[A-Za-z\s]{2,}$/;
 
     // Email or phone validation
@@ -45,9 +52,10 @@ export default function Contact() {
       newErrors.name = "Enter a valid name (letters only)";
     }
 
-    if (!emailRegex.test(form.contact) &&!phoneRegex.test(form.contact) )
-
-{
+    if (
+      !emailRegex.test(form.contact) &&
+      !phoneRegex.test(form.contact)
+    ) {
       newErrors.contact = "Enter a valid email or phone number";
     }
 
@@ -69,7 +77,20 @@ export default function Contact() {
 
     if (!validate()) return;
 
-  
+    const subject = encodeURIComponent(
+      `New message from ${form.name}`
+    );
+
+    const body = encodeURIComponent(`
+Name: ${form.name}
+
+Contact: ${form.contact}
+
+Message:
+${form.message}
+`);
+
+    window.location.href = `mailto:suppor@item7.com?subject=${subject}&body=${body}`;
 
     setForm({
       name: "",
@@ -91,15 +112,17 @@ export default function Contact() {
 
       <div className="contact__grid">
 
-        {/* LEFT SIDE (UNCHANGED UI) */}
+        {/* LEFT SIDE */}
         <div style={{ display: "grid", gap: "1.25rem" }}>
+
           <a href="tel:+2348155745321" className="contact-card">
             <div className="contact-card__icon primary">
               <Phone size={20} />
             </div>
+
             <div>
               <small>Call us</small>
-              <div>+234 815 574 5321</div>
+              <div> +234 7044195667</div>
             </div>
           </a>
 
@@ -107,9 +130,16 @@ export default function Contact() {
             <div className="contact-card__icon secondary">
               <MapPin size={20} />
             </div>
+
             <div>
               <small>Address</small>
-              <div style={{ fontSize: "1rem", marginTop: "0.4rem" }}>
+
+              <div
+                style={{
+                  fontSize: "1rem",
+                  marginTop: "0.4rem",
+                }}
+              >
                 CW3R+FQ3, Iwo Road, Ibadan
               </div>
             </div>
@@ -119,6 +149,7 @@ export default function Contact() {
             <div className="contact-card__icon accent">
               <Clock size={20} />
             </div>
+
             <div>
               <small>Hours</small>
               <div>Open daily 10:00 AM – 10:00 PM</div>
@@ -129,6 +160,7 @@ export default function Contact() {
             <div className="contact-card__icon dark">
               <Mail size={20} />
             </div>
+
             <div>
               <small>Email</small>
               <div>hello@item7go.ng</div>
@@ -140,56 +172,100 @@ export default function Contact() {
         <form className="contact-form" onSubmit={handleSubmit}>
           <h2>Send a message</h2>
 
+          {/* NAME */}
           <div>
             <label>Name</label>
+
             <input
               value={form.name}
-              onChange={(e) =>
-                setForm({ ...form, name: e.target.value })
-              }
+              onChange={(e) => {
+                setForm({
+                  ...form,
+                  name: e.target.value,
+                });
+
+                clearError("name");
+              }}
+              onFocus={() => clearError("name")}
+              placeholder="Your name"
               style={{
-                border: errors.name ? "1px solid red" : "",
+                border: errors.name
+                  ? "1px solid red"
+                  : "",
               }}
             />
+
             {errors.name && (
-              <small style={{ color: "red" }}>{errors.name}</small>
+              <small style={{ color: "red" }}>
+                {errors.name}
+              </small>
             )}
           </div>
 
+          {/* CONTACT */}
           <div>
             <label>Phone or email</label>
+
             <input
               value={form.contact}
-              onChange={(e) =>
-                setForm({ ...form, contact: e.target.value })
-              }
+              onChange={(e) => {
+                setForm({
+                  ...form,
+                  contact: e.target.value,
+                });
+
+                clearError("contact");
+              }}
+              onFocus={() => clearError("contact")}
+              placeholder="How we should reply"
               style={{
-                border: errors.contact ? "1px solid red" : "",
+                border: errors.contact
+                  ? "1px solid red"
+                  : "",
               }}
             />
+
             {errors.contact && (
-              <small style={{ color: "red" }}>{errors.contact}</small>
+              <small style={{ color: "red" }}>
+                {errors.contact}
+              </small>
             )}
           </div>
 
+          {/* MESSAGE */}
           <div>
             <label>Message</label>
+
             <textarea
               rows={5}
               value={form.message}
-              onChange={(e) =>
-                setForm({ ...form, message: e.target.value })
-              }
+              onChange={(e) => {
+                setForm({
+                  ...form,
+                  message: e.target.value,
+                });
+
+                clearError("message");
+              }}
+              onFocus={() => clearError("message")}
+              placeholder="Catering, feedback, large orders..."
               style={{
-                border: errors.message ? "1px solid red" : "",
+                border: errors.message
+                  ? "1px solid red"
+                  : "",
               }}
             />
+
             {errors.message && (
-              <small style={{ color: "red" }}>{errors.message}</small>
+              <small style={{ color: "red" }}>
+                {errors.message}
+              </small>
             )}
           </div>
 
-          <button type="submit">Send message</button>
+          <button type="submit">
+            Send message
+          </button>
         </form>
       </div>
     </section>

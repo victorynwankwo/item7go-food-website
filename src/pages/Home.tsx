@@ -29,9 +29,9 @@ const googleNavigate = (url: string) => {
               Naija comfort food done right — jollof, fried rice, suya, small chops and more, ready when you walk in.
             </p>
             <div className="hero__actions">
-              <a href="tel:+2348155745321" className="btn btn-primary">
-                Call to Order <ArrowRight size={18} />
-              </a>
+              {/* <a href="tel:+2348155745321" className="btn btn-primary"> */}
+                {/* Call to Order <ArrowRight size={18} /> */}
+              {/* </a> */}
               <Link to="/menu" className="btn btn-outline">See the menu</Link>
             </div>
             <div className="hero__meta">

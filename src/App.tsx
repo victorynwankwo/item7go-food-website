@@ -20,7 +20,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <WhatsAppButton phone="2348155745321" />
+      <WhatsAppButton phone="+2347044195667" />
     </>
   );
 }
