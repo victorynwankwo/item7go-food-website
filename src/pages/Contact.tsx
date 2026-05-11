@@ -90,7 +90,7 @@ Message:
 ${form.message}
 `);
 
-    window.location.href = `mailto:suppor@item7.com?subject=${subject}&body=${body}`;
+    window.open(`mailto:suppor@item7.com?subject=${subject}&body=${body}`, "_blank");
 
     setForm({
       name: "",
@@ -163,7 +163,7 @@ ${form.message}
 
             <div>
               <small>Email</small>
-              <div>hello@item7go.ng</div>
+              <div>suppor@item7.com</div>
             </div>
           </a>
         </div>

@@ -73,8 +73,8 @@ export default function MenuPage() {
           <p>Call us to order ahead — your meal will be ready when you arrive.</p>
           <div className="btn btn-primary"
           style={{cursor:"pointer"}}
-          onClick={()=> whatsappNavigate("https://wa.me/2348155745321?text=Hi%20Item%207%20Go%2C%20I%20would%20like%20to%20place%20an%20order.")}
-          >+234 815 574 5321</div>
+          onClick={()=> whatsappNavigate("https://wa.me/2347044195667?text=Hi%20Item%207%20Go%2C%20I%20would%20like%20to%20place%20an%20order.")}
+          >+2347044195667</div>
         </div>
       </div>
     </>

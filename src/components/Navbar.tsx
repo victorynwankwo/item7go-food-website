@@ -35,7 +35,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="tel:+2348155745321" className="btn btn-primary navbar__cta">
+        <a href="tel:+2347044195667" className="btn btn-primary navbar__cta">
           <Phone size={16} /> Order
         </a>
 
@@ -55,9 +55,9 @@ export default function Navbar() {
             {l.label}
           </NavLink>
         ))}
-        <a href="tel:+2348155745321" className="btn btn-primary">
-          <Phone size={16} /> Call to order
-        </a>
+        {/* <a href="tel:+2348155745321" className="btn btn-primary"> */}
+          {/* <Phone size={16} /> Call to order */}
+        {/* </a> */}
       </div>
     </header>
   );

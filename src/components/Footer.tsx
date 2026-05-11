@@ -20,8 +20,8 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a href="tel:+2348155745321">+234 815 574 5321</a></li>
-            <li><a href="mailto:hello@item7go.ng">hello@item7go.ng</a></li>
+            <li><a href="tel:++2347044195667">+2347044195667</a></li>
+            <li><a href="mailto:suppor@item7.com">suppor@item7.com</a></li>
           </ul>
         </div>
         <div>

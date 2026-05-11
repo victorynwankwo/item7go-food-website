@@ -19,7 +19,7 @@ export default function About() {
           <p>Today our pots stay hot from 10 AM to 10 PM, every day of the week, feeding students, families, workers and travellers passing through Iwo Road.</p>
         </div>
         <img src={hero} alt="Our signature jollof" 
-        style={{ width: "80%", height: "auto" }}
+        style={{ width: "90%", height: "auto" }}
         />
       </section>
 
