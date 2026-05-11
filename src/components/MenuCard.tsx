@@ -8,7 +8,7 @@ interface Props {
   phone?: string;
 }
 
-export default function MenuCard({ img, name, price, tag, phone = "+2348155745321" }: Props) {
+export default function MenuCard({ img, name, price, tag, phone = "+2347044195667" }: Props) {
   return (
     <article className="card menu-card">
       <div className="menu-card__img">
