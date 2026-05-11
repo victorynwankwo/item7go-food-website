@@ -85,7 +85,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: rgba(253, 247, 236, 0.98);
   backdrop-filter: blur(18px);
@@ -97,6 +97,7 @@
   transform: translateX(100%);
   transition: transform 0.35s ease;
   z-index: 40;
+  overflow-x: hidden;
 }
 
 /* open state */
